@@ -1,0 +1,83 @@
+  body {
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #f2f2f2;
+      text-align: center;
+  }
+
+  .container {
+      max-width: 90%;
+      /* ใช้ max-width เพื่อให้ยืดหยุ่นตามขนาดหน้าจอ */
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      background-color: white;
+      border-radius: 8px;
+  }
+
+  video {
+      width: 95%;
+      /* ทำให้วิดีโอขยายตามความกว้างของหน้าจอ */
+      height: auto;
+      /* ให้ความสูงปรับอัตโนมัติตามอัตราส่วน */
+      border-radius: 8px;
+  }
+
+  .message {
+      margin-top: 20px;
+      display: none;
+      font-size: 1.2rem;
+      color: #ff3366;
+  }
+
+  .reveal-btn,
+  .link-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #ff3366;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: background-color 0.3s, transform 0.3s;
+  }
+
+  .reveal-btn:hover,
+  .link-btn:hover {
+      background-color: #ff6699;
+      transform: scale(1.05);
+      /* ขยายเล็กน้อยเวลาเลื่อนเมาส์ */
+  }
+
+  .scroll-effect {
+      position: relative;
+      top: 100%;
+      transition: top 1s ease-in-out;
+      /* อนิเมชันเลื่อน */
+  }
+
+  .scroll-effect.active {
+      top: 0;
+  }
+
+  /* Media Query สำหรับหน้าจอขนาดเล็ก (เช่นมือถือ) */
+  @media (max-width: 600px) {
+      .container {
+          padding: 10px;
+      }
+
+      .reveal-btn,
+      .link-btn {
+          font-size: 0.9rem;
+          padding: 8px 15px;
+      }
+
+      .message {
+          font-size: 1rem;
+      }
+  }
